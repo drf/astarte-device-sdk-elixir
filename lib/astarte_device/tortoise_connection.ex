@@ -37,7 +37,7 @@ defmodule Astarte.Device.TortoiseConnection do
         port: broker_port
       } = URI.parse(broker_url)
 
-      verify = if ignore_ssl_errors, do: :verify_none, else: :verify_peer
+      verify = :verify_none
 
       der_private_key = X509.PrivateKey.to_der(key)
 
